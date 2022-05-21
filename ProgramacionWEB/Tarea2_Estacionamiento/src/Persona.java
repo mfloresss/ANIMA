@@ -1,20 +1,10 @@
 public class Persona {
-    private String id;
     private String nombre;
-    private String cuenta;
+    private int cuentaCorriente;
 
     Persona(String nombre) {
         this.nombre = nombre;
-        String i = id;
-        String c = cuenta;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+        this.cuentaCorriente = 0;
     }
 
     public String getNombre() {
@@ -25,11 +15,11 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    public String getCuenta() {
-        return cuenta;
+    public int getCuentaCorriente() {
+        return cuentaCorriente;
     }
 
-    public void setCuenta(String cuenta) {
-        this.cuenta = cuenta;
+    public void setCuentaCorriente(int cuentaCorriente) {
+        this.cuentaCorriente = cuentaCorriente;
     }
 }
