@@ -1,0 +1,33 @@
+package logica;
+
+public class Main {
+
+	// Atributos
+	String[] Usuarios = new String[5];
+	String[] Blogs = new String[15];
+
+	public static void main(String[] args) {
+
+	}
+	// Usuarios
+	public void user1() {
+		Usuario user1= new Usuario("Juan", "juan@juan.com", "1234", 1);
+	}
+	public void user2() {
+		Usuario user2= new Usuario("Carlos", "carlos@carlos.com", "1234", 2);
+	}
+	public void user3() {
+		Usuario user3= new Usuario("Pedro", "pedro@pedro.com", "1234", 2);
+	}
+	
+	// Blogs
+	public void blog1() {
+		Blog blog1= new Blog("Un dia mas en el universo", "juan@juan.com", "1234");
+	}
+	public void blog2() {
+		Blog blog2= new Blog("Juan", "juan@juan.com", "1234");
+	}
+	public void blog3() {
+		Blog blog3= new Blog("Juan", "juan@juan.com", "1234");
+	}
+}

@@ -1,0 +1,44 @@
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class ejercicosRepaso {
+
+	public static void main(String[] args) {
+		Scanner tec = new Scanner(System.in);
+		short opc;
+
+		do {
+			System.out.println(
+					"+++++++++++ Repaso Programacion I +++++++++++\n\n> Ejercicio 1 (Ordenamiento de 10 numeros)"
+							+ "\n\n> Ejercicio 2 (Calculadora de promedios)"
+							+ "\n\n> Ejercicio 3 (Verificador de CI)\n\n++++++++++++++++++++++++++++++++++++++++++++++");
+			opc = tec.nextShort();
+			switch (opc) {
+			case 1:
+				int A[] = new int[10];
+				System.out.println("+++++++++ Ordenamiento de 10 numeros +++++++++\n");
+
+				for (int i = 0; i < A.length; i++) {
+					System.out.println("Ingrese el numero " + (i + 1));
+					A[i] = tec.nextInt();
+
+				}
+				Arrays.sort(A);
+
+				System.out.println("Los numeros ingresados anteriormente ordenados de menor a mayor:\n\n"
+						+ Arrays.toString(A) + "\n\n++++++++++++++++++++++++++++++++++++++++++++++\n");
+
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			default:
+				break;
+			}
+		} while (opc != 0);
+
+	}
+
+}

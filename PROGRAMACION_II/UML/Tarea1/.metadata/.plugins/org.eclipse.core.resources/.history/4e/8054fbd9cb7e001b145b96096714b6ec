@@ -1,0 +1,75 @@
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class ejercicosRepaso {
+
+	public static void main(String[] args) {
+		Scanner tec = new Scanner(System.in);
+		short opc;
+
+		do {
+			System.out.println(
+					"+++++++++++ Repaso Programacion I +++++++++++\n\n> Ejercicio 1 (Ordenamiento de 10 numeros)"
+							+ "\n\n> Ejercicio 2 (Calculadora de promedios)"
+							+ "\n\n> Ejercicio 3 (Verificador de CI)\n\n++++++++++++++++++++++++++++++++++++++++++++++");
+			opc = tec.nextShort();
+			switch (opc) {
+			case 1:
+				int A[] = new int[10];
+				System.out.println("+++++++++ Ordenamiento de 10 numeros +++++++++\n");
+
+				for (int i = 0; i < A.length; i++) {
+					System.out.println("Ingrese el numero " + (i + 1));
+					A[i] = tec.nextInt();
+
+				}
+				int aux = 0;
+				for (int j = 0; j < A.length; j++) {
+					for (int i = 0; i < A.length - 1; i++) {
+						if (A[i] > A[i + 1]) {
+							aux = A[i];
+							A[i] = A[i + 1];
+							A[i + 1] = aux;
+						}
+					}
+				}
+
+				System.out.println("Los numeros ingresados anteriormente ordenados de menor a mayor:\n\n"
+						+ Arrays.toString(A) + "\n\n++++++++++++++++++++++++++++++++++++++++++++++\n");
+				break;
+			case 2:
+				double aux1 = 0, aux2 = 0, promedio = 0;
+
+				int B[] = new int[12];
+				for (int i = 0; i < B.length; i++) {
+					System.out.println("Ingrese la nota " + (i + 1) + ":");
+					B[i] = tec.nextInt();
+				}
+				
+				aux1 = B[0] + B[1] + B[2];
+				aux1 /=3;
+				aux2 = (B[3] + B[4] + B[5]);
+				aux2 /= 3;
+				promedio = aux1 + aux2;
+				promedio /=2;
+				aux1 = (B[6] + B[7] + B[8]);
+				aux1/=3;
+				promedio +=aux1;
+				promedio /=2;
+				aux1 = (B[9] + B[10] + B[11]);
+				aux1 /= 3;
+				promedio += aux1;
+				promedio /=2;
+				System.out.println(promedio);
+				break;
+			case 3:
+				break;
+			default:
+				break;
+			}
+		} while (opc != 0);
+
+	}
+
+}

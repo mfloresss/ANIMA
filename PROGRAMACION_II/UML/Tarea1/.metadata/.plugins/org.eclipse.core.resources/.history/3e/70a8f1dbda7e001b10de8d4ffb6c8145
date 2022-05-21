@@ -1,0 +1,83 @@
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class ejercicosRepaso {
+
+	public static void main(String[] args) {
+		Scanner tec = new Scanner(System.in);
+		short opc;
+
+		do {
+			System.out.println(
+					"+++++++++++ Repaso Programacion I +++++++++++\n\n> Ejercicio 1 (Ordenamiento de 10 numeros)"
+							+ "\n\n> Ejercicio 2 (Calculadora de promedios)"
+							+ "\n\n> Ejercicio 3 (Verificador de CI)\n\n++++++++++++++++++++++++++++++++++++++++++++++");
+			opc = tec.nextShort();
+
+			switch (opc) { // menu
+
+			case 1: // ejercicio 1
+
+				int aux = 0, A[] = new int[10];
+
+				System.out.println("+++++++++ Ordenamiento de 10 numeros +++++++++\n");
+
+				for (int i = 0; i < A.length; i++) { // carga al array con 10 numero de tipo entero
+					System.out.println("Ingrese el numero " + (i + 1));
+					A[i] = tec.nextInt();
+				}
+
+				for (int j = 0; j < A.length; j++) { // metodo burbuja (ordenamiento de los numero enteros del array)
+					for (int i = 0; i < A.length - 1; i++) {
+						if (A[i] > A[i + 1]) {
+							aux = A[i];
+							A[i] = A[i + 1];
+							A[i + 1] = aux;
+						}
+					}
+				}
+				System.out.println("Los numeros ingresados anteriormente ordenados de menor a mayor:\n\n"
+						+ Arrays.toString(A) + "\n\n++++++++++++++++++++++++++++++++++++++++++++++\n");
+				break;
+
+			case 2:
+				double sumaProm = 0, C[] = new double[6];
+				int B[] = new int[12];
+
+				for (int i = 0; i < B.length; i++) {
+					System.out.println("Ingrese la nota " + (i + 1) + ":");
+					B[i] = tec.nextInt();
+
+					sumaProm = (B[0] + B[1] + B[2]); // Calculo del 1ero promedio
+					C[0] = Math.round(sumaProm / 3);
+
+					sumaProm = (B[3] + B[4] + B[5]); // Calculo del 2ero promedio
+					C[1] = sumaProm / 3;
+
+					sumaProm = (B[6] + B[7] + B[8]); // Calculo del 3ero promedio
+					C[2] = sumaProm / 3;
+
+					sumaProm = (B[9] + B[10] + B[11]); // Calculo del 4ero promedio
+					C[3] = sumaProm / 3;
+
+					// Calculo del promedio final
+
+//					sumaProm = C[0] + C[1];
+//					C[0] = sumaProm / 2;
+					
+					
+				}
+				System.out.println(C[0]);
+
+				break;
+			case 3:
+				break;
+			default:
+				break;
+			}
+		} while (opc != 0);
+
+	}
+
+}

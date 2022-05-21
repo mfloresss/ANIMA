@@ -1,0 +1,219 @@
+/* -----------------------------------------------------------------------------
+*	                                    GAME HTML
+*  ----------------------------------------------------------------------------- */
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .game .scoreboard {
+    bottom: 30px;
+    left: 50px;
+  }
+  .game .scoreboard > * span {
+    font-size: 20px;
+  }
+  .game .scoreboard .container-timer {
+    width: 90px;
+    height: 90px;
+  }
+  .game .container-score #succes-label {
+    width: 50px;
+    height: 50px;
+  }
+  .game .container-score #failure-label {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #show-label > * {
+    margin: 15px 0;
+  }
+  .game .scoreboard {
+    bottom: 40px;
+    width: 100%;
+    left: initial;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .game .container-score #succes-label,
+  .game .container-score #failure-label {
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+  }
+  .game .container-score #succes-label {
+    margin-right: 20px;
+  }
+}
+
+/* Mobiles size L */
+@media only screen and (max-width: 425px) {
+  header {
+    position: absolute;
+  }
+  .start-game-label,
+  .game {
+    height: 100vh;
+  }
+  .game .scoreboard {
+    font-size: 35px;
+  }
+  .circle li {
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+  }
+  .game .text {
+    width: 280px;
+    padding-bottom: 110px;
+  }
+  .game .text #word {
+    font-size: 35px;
+  }
+  .game .text #starts-or-contains,
+  .game .text #description {
+    font-size: 17px;
+  }
+  .game form {
+    padding-top: 170px;
+  }
+  .game form input {
+    width: 245px;
+    height: 26px;
+  }
+  .game form button {
+    width: 90px;
+    height: 23px;
+  }
+  .game form input,
+  .game form button {
+    font-size: 10px;
+  }
+  .game form .btn {
+    margin-top: 10px;
+  }
+  .game form .btn #submit {
+    margin-right: 10px;
+  }
+  #show-incorrect-word > *,
+  #show-label-finish-game > * {
+    margin: 30px 0;
+  }
+  #show-incorrect-word #letra {
+    height: 70px;
+    width: 70px;
+  }
+  #show-incorrect-word #title,
+  #show-incorrect-word #letra {
+    font-size: 35px;
+  }
+  #show-incorrect-word #button-show-label {
+    width: 190px;
+    font-size: 16px;
+  }
+}
+
+/* Mobiles size M */
+@media only screen and (max-width: 375px) {
+  .circle li {
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+  }
+  .game .text {
+    width: 230px;
+    padding-bottom: 100px;
+  }
+  .game .text #word {
+    font-size: 30px;
+  }
+  .game .text #starts-or-contains,
+  .game .text #description {
+    font-size: 15px;
+  }
+  .game form {
+    padding-top: 140px;
+  }
+  .game form input {
+    width: 220px;
+    height: 23px;
+  }
+  .game form button {
+    width: 80px;
+    height: 20px;
+  }
+  .game form input,
+  .game form button {
+    font-size: 9px;
+  }
+  .container-label {
+    padding: 0 30px;
+  }
+  #show-label > * {
+    margin: 10px 0;
+  }
+  #show-label #letra {
+    height: 70px;
+    width: 70px;
+  }
+  #show-label #title,
+  #show-label #letra {
+    font-size: 30px;
+  }
+  #show-label #correct-word,
+  #show-label #description-word {
+    font-size: 20px;
+  }
+  #show-label #button-show-label {
+    width: 190px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+/* Mobiles size S */
+@media only screen and (max-width: 320px) {
+  .circle li {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+  .game .text {
+    width: 200px;
+    padding-bottom: 90px;
+  }
+  .game .text #word {
+    font-size: 20px;
+  }
+  .game .text #starts-or-contains,
+  .game .text #description {
+    font-size: 13px;
+  }
+  .game form {
+    padding-top: 112px;
+  }
+  .game form input {
+    width: 200px;
+    height: 20px;
+  }
+  .game form button {
+    width: 75px;
+    height: 17px;
+  }
+  .game form input,
+  .game form button {
+    font-size: 8px;
+  }
+  .game .scoreboard {
+    bottom: 20px;
+  }
+  #show-incorrect-word,
+  #show-label-finish-game {
+    padding: 0 30px;
+  }
+  #show-incorrect-word > *,
+  #show-label-finish-game > * {
+    margin: 20px 0;
+  }
+}

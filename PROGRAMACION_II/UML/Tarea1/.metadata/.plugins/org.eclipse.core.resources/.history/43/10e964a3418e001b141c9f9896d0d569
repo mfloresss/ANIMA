@@ -1,0 +1,42 @@
+package logica;
+
+public class Blog {
+	// Atributos
+	static String titulo;
+	static String cuerpo;
+	static String mailAutor;
+
+	// Constructor
+	public Blog(String titulo, String cuerpo, String mailAutor) {
+		this.titulo = titulo;
+		this.cuerpo = cuerpo;
+		this.mailAutor = mailAutor;
+	}
+
+	// Setters
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public void setCuerpo(String cuerpo) {
+		this.cuerpo = cuerpo;
+	}
+
+	public void setMailAutor(String mailAutor) {
+		this.mailAutor = mailAutor;
+	}
+
+	// Getters
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public String getCuerpo() {
+		return this.cuerpo;
+	}
+
+	public String getMailAutor() {
+		return mailAutor;
+	}
+
+}

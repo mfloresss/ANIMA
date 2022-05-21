@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>ANCAP</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./src/logo-ancap.png" alt="Logo Ancap" />
+        <h1>ANCAP</h1>
+      </div>
+      <div class="full-header">
+        <h1>Queres saber cuanta nafta consumis?</h1>
+        <div class="button-link">
+          <a href="#inputs">Haz click aqui</a>
+        </div>
+      </div>
+    </header>
+    <div class="container" id="inputs">
+      <h1 class="title">Ingrese los siguientes datos</h1>
+      <form onsubmit="return false;">
+        <select id="options">
+          <option value="" disabled selected>Tipo de nafta</option>
+          <option value="56">Nafta Super 95</option>
+          <option value="58">Nafta Premium 97</option>
+          <option value="56">Gasoil 10-S</option>
+          <option value="37">Gasoil 50-S</option>
+        </select>
+        <input
+          type="number"
+          name="Km"
+          id="CantKm"
+          placeholder="Km a recorrer"
+          required
+        />
+        <input
+          type="number"
+          name="Km/l"
+          id="KmL"
+          placeholder="Km/l (consumo)"
+          required
+        />
+        <a
+          href="#results"
+          type="submit"
+          onclick="calculo();"
+          id="buttonConsultar"
+        >
+          Consultar
+        </a>
+      </form>
+    </div>
+    <div class="container container-results" id="results">
+      <h1 class="title">Resultado</h1>
+      <h2 id="one"></h2>
+      <h2 id="two"></h2>
+    </div>
+    <footer>
+      <div class="container container-footer">
+        <p class="copy">&copy; Micha Developer | Michael Flores</p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const calculo = () => {
+      const nafta = document.getElementById("options").value;
+      const Km = document.getElementById("CantKm").value;
+      const KmL = document.getElementById("KmL").value;
+      if (Km === "" && KmL === "") {
+        document.getElementById("one").innerHTML = "No pusiste nada";
+      } else {
+        const litros = Km / KmL;
+        const precio = litros * nafta;
+        document.getElementById("one").innerHTML = `Litros: ${litros.toFixed(
+          2
+        )}`;
+        document.getElementById("two").innerHTML = `Precio: ${precio.toFixed(
+          2
+        )}`;
+      }
+    };
+  </script>
+</html>

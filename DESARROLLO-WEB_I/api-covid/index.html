@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles-responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>API COVID</title>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Informacion COVID 19</h1>
+        <a href="#container-showInfo">Haz click aqui para consultar</a>
+      </header>
+      <div id="container-showInfo">
+        <header>
+          <h2>Seleccione un pais</h2>
+        </header>
+        <form onsubmit="return false;">
+          <select id="options"></select>
+          <img src="./src/white-down-arrow.jpg" id="downArrow" />
+          <a href="#showInfo" id="submit">Enviar</a>
+        </form>
+      </div>
+      <div id="showInfo"></div>
+    </div>
+    <footer>
+      <h2 class="copy">&copy; Micha Developer | Michael Flores</h2>
+    </footer>
+  </body>
+  <script src="./script.js"></script>
+</html>

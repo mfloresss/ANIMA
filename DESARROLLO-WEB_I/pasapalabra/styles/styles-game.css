@@ -1,0 +1,434 @@
+/* ------------------------------------------------
+*	                       LAYOUT
+*  ------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+:root {
+  --color-blue: #3eb8ff;
+  --color-green: #b5ff93;
+  --color-red: #ff9696;
+  --color-yellow: #ffe37e;
+}
+body {
+  background-image: url(../src/bg-pasapalabra.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Overpass", sans-serif;
+}
+.start-game-label {
+  color: white;
+}
+.start-game-label,
+.game {
+  width: 100%;
+  height: calc(100vh - 121px);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  list-style: none;
+}
+input,
+button {
+  border: 0;
+  outline: 0;
+  color: black;
+  background-color: white;
+}
+
+/* ------------------------------------------------
+*	                       HEADER
+*  ------------------------------------------------ */
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header #title {
+  padding: 18px 0;
+  color: white;
+  font-size: 40px;
+  font-family: "Paytone One", sans-serif;
+}
+header .line {
+  width: 90%;
+  height: 3px;
+  background-color: white;
+}
+header #copy {
+  padding-top: 10px;
+  font-size: 10px;
+  color: white;
+}
+/* ------------------------------------------------
+*	                       CIRCLE
+*  ------------------------------------------------ */
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.circle li {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 100%;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-blue);
+  box-shadow: 0px 4px 4px 0px #0000001a;
+}
+.circle li:nth-of-type(1) {
+  transform: rotate(270deg) translate(10.6875em) rotate(-270deg);
+}
+.circle li:nth-of-type(2) {
+  transform: rotate(284.4deg) translate(10.6875em) rotate(-284.4deg);
+}
+.circle li:nth-of-type(3) {
+  transform: rotate(298.8deg) translate(10.6875em) rotate(-298.8deg);
+}
+.circle li:nth-of-type(4) {
+  transform: rotate(313.2deg) translate(10.6875em) rotate(-313.2deg);
+}
+.circle li:nth-of-type(5) {
+  transform: rotate(327.6deg) translate(10.6875em) rotate(-327.6deg);
+}
+.circle li:nth-of-type(6) {
+  transform: rotate(342deg) translate(10.6875em) rotate(-342deg);
+}
+.circle li:nth-of-type(7) {
+  transform: rotate(356.4deg) translate(10.6875em) rotate(-356.4deg);
+}
+.circle li:nth-of-type(8) {
+  transform: rotate(370.8deg) translate(10.6875em) rotate(-370.8deg);
+}
+.circle li:nth-of-type(9) {
+  transform: rotate(385.2deg) translate(10.6875em) rotate(-385.2deg);
+}
+.circle li:nth-of-type(10) {
+  transform: rotate(399.6deg) translate(10.6875em) rotate(-399.6deg);
+}
+.circle li:nth-of-type(11) {
+  transform: rotate(414deg) translate(10.6875em) rotate(-414deg);
+}
+.circle li:nth-of-type(12) {
+  transform: rotate(428.4deg) translate(10.6875em) rotate(-428.4deg);
+}
+.circle li:nth-of-type(13) {
+  transform: rotate(442.8deg) translate(10.6875em) rotate(-442.8deg);
+}
+.circle li:nth-of-type(14) {
+  transform: rotate(457.2deg) translate(10.6875em) rotate(-457.2deg);
+}
+.circle li:nth-of-type(15) {
+  transform: rotate(471.6deg) translate(10.6875em) rotate(-471.6deg);
+}
+.circle li:nth-of-type(16) {
+  transform: rotate(486deg) translate(10.6875em) rotate(-486deg);
+}
+.circle li:nth-of-type(17) {
+  transform: rotate(500.4deg) translate(10.6875em) rotate(-500.4deg);
+}
+.circle li:nth-of-type(18) {
+  transform: rotate(514.8deg) translate(10.6875em) rotate(-514.8deg);
+}
+.circle li:nth-of-type(19) {
+  transform: rotate(529.2deg) translate(10.6875em) rotate(-529.2deg);
+}
+.circle li:nth-of-type(20) {
+  transform: rotate(543.6deg) translate(10.6875em) rotate(-543.6deg);
+}
+.circle li:nth-of-type(21) {
+  transform: rotate(558deg) translate(10.6875em) rotate(-558deg);
+}
+.circle li:nth-of-type(22) {
+  transform: rotate(572.4deg) translate(10.6875em) rotate(-572.4deg);
+}
+.circle li:nth-of-type(23) {
+  transform: rotate(586.8deg) translate(10.6875em) rotate(-586.8deg);
+}
+.circle li:nth-of-type(24) {
+  transform: rotate(601.2deg) translate(10.6875em) rotate(-601.2deg);
+}
+.circle li:nth-of-type(25) {
+  transform: rotate(615.6deg) translate(10.6875em) rotate(-615.6deg);
+}
+.circle .item--success {
+  background-color: var(--color-green);
+}
+.circle .item--failure {
+  background-color: var(--color-red);
+}
+.circle .item--skip {
+  background-color: var(--color-yellow);
+}
+.parpadea {
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+@-moz-keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ------------------------------------------------
+*	                  CONTENT CIRCLE
+*  ------------------------------------------------ */
+
+.game .text {
+  position: absolute;
+  width: 300px;
+  padding-bottom: 145px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.game .text > * {
+  padding-bottom: 5px;
+}
+.game .text #word {
+  font-size: 40px;
+}
+.game .text #starts-or-contains,
+.game .text #description {
+  font-size: 17px;
+}
+.game form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  padding-top: 150px;
+}
+.game form .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.game form input {
+  width: 300px;
+  height: 35px;
+  padding: 0 14px;
+}
+.game form button {
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+}
+.game form input,
+.game form button {
+  font-weight: 100;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 4px 0px #0000001a;
+  font-family: "Overpass", sans-serif;
+}
+.game form input::placeholder {
+  color: black;
+}
+.game form .btn #submit {
+  margin-right: 20px;
+}
+
+.game form .btn #submit:hover {
+  background-color: var(--color-green);
+  transition: ease 0.4s;
+}
+
+.game form .btn #skip:hover {
+  background-color: var(--color-yellow);
+  transition: ease 0.4s;
+}
+
+/* ------------------------------------------------
+*	                  SCOREBOARD
+*  ------------------------------------------------ */
+
+.game .scoreboard {
+  position: absolute;
+  bottom: 60px;
+  left: 100px;
+  display: flex;
+  align-items: flex-end;
+}
+.game .scoreboard > * span {
+  font-size: 25px;
+}
+.game .scoreboard .container-timer {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  position: relative;
+}
+.game .container-score #succes-label {
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-green);
+}
+.game .container-score #failure-label {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-red);
+}
+.game .container-score {
+  display: flex;
+  align-items: flex-end;
+}
+.game .container-score #succes-label,
+.game .container-score #failure-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.scoreboard .container-timer .base-timer__svg {
+  transform: scaleX(-1);
+}
+.scoreboard .container-timer .base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+.scoreboard .container-timer .base-timer__path-remaining {
+  stroke-width: 5px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+.base-timer__path-remaining.blue {
+  color: var(--color-blue);
+}
+.base-timer__path-remaining.yellow {
+  color: var(--color-yellow);
+}
+.base-timer__path-remaining.red {
+  color: var(--color-red);
+}
+.container-timer #timer-label {
+  position: absolute;
+}
+
+/* ------------------------------------------------
+*	                       LABELS
+*  ------------------------------------------------ */
+
+#show-incorrect-word,
+#show-label-finish-game {
+  width: 100%;
+  height: 100vh;
+  padding: 0 70px;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+#show-incorrect-word > *,
+#show-label-finish-game > *,
+#start-game-label > * {
+  margin: 40px 0;
+}
+#show-incorrect-word #letra {
+  height: 90px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: #fb3640;
+}
+#show-incorrect-word #title,
+#show-incorrect-word #letra,
+#show-label-finish-game #title,
+#start-game-label #title {
+  font-size: 50px;
+}
+#show-incorrect-word #correct-word,
+#show-incorrect-word #description-word,
+#show-label-finish-game #cant-word-correct,
+#show-label-finish-game #cant-word-failure {
+  font-size: 20px;
+}
+#start-game-label #button-exit-label,
+#show-incorrect-word #button-exit-label,
+#show-label-finish-game #new-game {
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#show-incorrect-word #button-show-label:hover,
+#start-game-label #button-exit-label:hover,
+#show-label-finish-game #new-game:hover {
+  background-color: var(--color-blue);
+  color: white;
+  transition: ease 0.4s;
+  transition: all 0.3s ease-in-out;
+}

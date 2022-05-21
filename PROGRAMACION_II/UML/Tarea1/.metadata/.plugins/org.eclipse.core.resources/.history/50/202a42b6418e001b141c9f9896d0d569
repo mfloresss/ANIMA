@@ -1,0 +1,51 @@
+package logica;
+
+public class Main {
+
+	// Atributos
+	String[] Usuarios = new String[5];
+	String[] Blogs = new String[15];
+	
+
+	public static void main(String[] args) {
+
+	}
+
+	// Usuarios
+	public void user1() {
+		Usuario user1 = new Usuario("Juan", "juan@juan.com", "1234", 1);
+		
+	}
+
+	public void user2() {
+		Usuario user2 = new Usuario("Carlos", "carlos@carlos.com", "1234", 2);
+	}
+
+	public void user3() {
+		Usuario user3 = new Usuario("Pedro", "pedro@pedro.com", "1234", 2);
+		
+	}
+
+	// Blogs
+	public void blog1() {
+		Blog blog1 = new Blog("Un dia mas en el universo", "Es un libro muy bello, muy entretenido... o no...",
+				"juan@juan.com");	
+	}
+
+	public void blog2() {
+		Blog blog2 = new Blog("La divina comedia", "Es un libro muy bello, habla del infierno segun Dante",
+				"carlos@carlos.com");
+	}
+
+	public void blog3() {
+		Blog blog3 = new Blog("El hombre en busca de sentido",
+				"Es un libro uy bello, habla de que todos deberiamos tener un sentido de vida", "carlos@carlos.com");
+	}
+
+	// Imprimir blogs
+	public void printBlogsByAutor(String mailAutor, Blog[] blogs) {
+		System.out.println(Blogs[0]);
+		
+	}
+
+}

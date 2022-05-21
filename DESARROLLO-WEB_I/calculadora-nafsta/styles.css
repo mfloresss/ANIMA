@@ -1,0 +1,183 @@
+/* -----------------------------------------------------
+*                           LAYOUT
+*  ----------------------------------------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+/* -----------------------------------------------------
+*                           Texts
+*  ----------------------------------------------------- */
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+h2 {
+  font-size: 50px;
+  text-align: center;
+}
+.logo > h1 {
+  font-family: "Heebo", sans-serif;
+}
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/* -----------------------------------------------------
+*                           Logo
+*  ----------------------------------------------------- */
+
+.logo {
+  width: 100%;
+  margin: 50px 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: #fff;
+}
+
+.logo > img {
+  width: 50px;
+  margin-right: 15px;
+}
+
+/* -----------------------------------------------------
+*                           Header
+*  ----------------------------------------------------- */
+
+header {
+  background: linear-gradient(to right, #134e5e9b, #134e5e9b),
+    url(src/estacion_ancap_ee651789475e7902b2dad3ecb00843a5.jpeg);
+  background: -webkit-linear-gradient(to right, #134e5e9b, #134e5e9b),
+    url(src/estacion_ancap_ee651789475e7902b2dad3ecb00843a5.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.full-header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.button-link > a {
+  width: 300px;
+  height: 75px;
+  font-size: 30px;
+  font-weight: 100;
+  border-radius: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.button-link {
+  margin-top: 50px;
+}
+
+/* -----------------------------------------------------
+*                           Body
+*  ----------------------------------------------------- */
+
+.container {
+  width: 90%;
+  padding: 130px 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+select,
+input,
+#buttonConsultar {
+  width: 20rem;
+  height: 3rem;
+  outline: 0;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  border: none;
+  font: inherit;
+  color: black;
+  text-align: center;
+}
+
+#buttonConsultar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+select:hover,
+input:hover,
+#buttonConsultar:hover {
+  /* border-radius: 2rem; */
+  background: linear-gradient(to right, #134e5e9b, #134e5e9b);
+  background: -webkit-linear-gradient(to right, #134e5e9b, #134e5e9b);
+  color: #fff;
+}
+
+input:hover::placeholder {
+  color: #fff;
+}
+
+input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+#buttonConsultar a:hover {
+  color: #fff;
+}
+.container-results .title {
+  margin-bottom: 100px;
+}
+.container-results #one {
+  margin-bottom: 100px;
+}
+.container-results h2 {
+  font-size: 40px;
+}
+
+/* -----------------------------------------------------
+*                           Footer
+*  ----------------------------------------------------- */
+
+.container-footer {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
