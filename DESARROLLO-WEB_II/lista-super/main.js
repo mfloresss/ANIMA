@@ -1,14 +1,15 @@
-const root = document.getElementById("root");
 const { useState } = React;
+const root = document.getElementById("root");
 
-const ListItem = ({ item, k, ...rest }) => {
-  const [toDoDone, setToDoDone] = useState(false);
+const ListItem = ({ item, marginBottom }) => {
+  const [itemDone, setItemDone] = useState(false);
 
   return (
     <div
       style={{
-        width: " 100%",
+        width: "100%",
         padding: "5px 20px",
+        marginBottom,
         display: "flex",
         alignItems: " center",
         justifyContent: "space-between",
@@ -17,10 +18,9 @@ const ListItem = ({ item, k, ...rest }) => {
       }}
     >
       <li
-        key={k}
         style={{
-          color: "#fff",
-          textDecoration: toDoDone ? "line-through" : "none",
+          color: "#ffff",
+          textDecoration: itemDone && "line-through",
         }}
       >
         {item.data.toLocaleUpperCase()}
@@ -32,9 +32,7 @@ const ListItem = ({ item, k, ...rest }) => {
         }}
         type="checkbox"
         value={item.data}
-        onClick={(e) => {
-          if (item.data === e.target.value) setToDoDone(!toDoDone);
-        }}
+        onClick={() => setItemDone(!itemDone)}
       />
     </div>
   );
@@ -51,45 +49,55 @@ const List = () => {
       data: "manzana",
     },
     {
-      type: "alimento",
+      type: "producto",
       data: "cereal",
     },
     {
-      type: "alimento",
+      type: "producto",
       data: "pan",
+    },
+    {
+      type: "producto",
+      data: "agua jane",
+    },
+    {
+      type: "producto",
+      data: "perfumol",
+    },
+    {
+      type: "producto",
+      data: "jabon",
+    },
+    {
+      type: "producto",
+      data: "shampoo",
     },
   ];
 
   return (
     <div className="listCard">
-      <h1 style={{ color: "#231651" }}>Lista super</h1>
+      <header>
+        <h1 style={{ color: "#231651" }}>Lista super</h1>
+      </header>
       <div
         style={{
           width: "100%",
-          height: "calc(100% - 87.5px)",
-          padding: "0 20px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "40px",
+          height: "calc(100% - 87px)",
+          padding: "20px 20px",
           overflowY: "auto",
         }}
       >
         {list.map((item, i) => (
-          <ListItem item={item} key={i} />
+          <ListItem
+            item={item}
+            key={i}
+            marginBottom={i !== list.length - 1 && "35px"}
+          />
         ))}
       </div>
     </div>
   );
 };
-
-// value={item.data}
-// onClick={(e) => {
-//   if (item.data === e.target.value) {
-//     item.complete = !item.complete;
-//   }
-// }}
 
 const App = () => {
   return (
