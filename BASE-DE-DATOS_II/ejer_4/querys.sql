@@ -11,11 +11,13 @@
     SELECT B.NombreBanda, B.CantInt, A.Titulo as "Titulo Album", A.Anio as "Año" FROM ALBUM AS A NATURAL JOIN BANDA AS B WHERE A.Anio < 2003 AND CantInt = (SELECT MIN(CantInt) FROM BANDA);
     
 -- Mostrar las edades de todos los integrantes y luego sumar todas las edades.
-	SELECT PriNom, PriApe, SUM(2022 - FechaNac) FROM INTEGRANTE;
-    select *, DATEDIFF(FechaNac, "2022-02-02") AS edad from INTEGRANTE;
+	-- SELECT PriNom, PriApe, SUM(2022 - FechaNac) FROM INTEGRANTE;
+    -- SELECT *,  2022 - YEAR(FechaNac) AS edad from INTEGRANTE;
+    SELECT *,  YEAR(curdate()) - YEAR(FechaNac) AS edad from INTEGRANTE;
 
 -- Insert : Alain Caron bajista Grupo musical: Uzeb (Desde 1978) jazz Nacimiento: 5 de mayo de 1955
-	INSERT INTO BANDA (NomBanda, AnioCrea, CodPais, CodGenero, CantIntegrantes) VALUES ('Alain Caron bajista Grupo musical: Uzeb (Desde 1978) jazz', '1978', '1', '2', '4'); 
+	-- INSERT INTO INTEGRANTE (CodIntegrante, PriNom, PriApe, CodPais, FechaNac) VALUES (213, "Alain", "Caron", "USA", "1955-05-05");
+	-- INSERT INTO INTEGRA (CodIntegrante, CodBanda, IdRol, Fdesde, Fhasta) VALUES (213, );
 
 -- Luego : 
 -- Con subquerys -> Nombre bajista más veterano canadiense.
