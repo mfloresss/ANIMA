@@ -13,7 +13,7 @@ const ListItem = ({ item, marginBottom }) => {
         display: "flex",
         alignItems: " center",
         justifyContent: "space-between",
-        background: item.type === "fruta" ? "#4DCCBD" : "#2374AB",
+        background: item.fruta ? "#4DCCBD" : "#2374AB",
         borderRadius: "20px",
       }}
     >
@@ -41,36 +41,36 @@ const ListItem = ({ item, marginBottom }) => {
 const List = () => {
   const list = [
     {
-      type: "fruta",
-      data: "naranja",
-    },
-    {
-      type: "fruta",
       data: "manzana",
+      fruta: true,
     },
     {
-      type: "producto",
       data: "cereal",
+      fruta: false,
     },
     {
-      type: "producto",
       data: "pan",
+      fruta: false,
     },
     {
-      type: "producto",
+      data: "naranja",
+      fruta: true,
+    },
+    {
+      data: "banana",
+      fruta: true,
+    },
+    {
       data: "agua jane",
+      fruta: false,
     },
     {
-      type: "producto",
-      data: "perfumol",
-    },
-    {
-      type: "producto",
-      data: "jabon",
-    },
-    {
-      type: "producto",
       data: "shampoo",
+      fruta: false,
+    },
+    {
+      data: "jabon",
+      fruta: false,
     },
   ];
 
