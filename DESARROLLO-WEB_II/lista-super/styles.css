@@ -11,11 +11,16 @@
   justify-content: center;
   align-items: center;
 }
-.listCard {
+.listCard,
+.listForm {
   height: 70%;
   width: 50%;
   text-align: center;
   border-radius: 20px;
   font-size: 2rem;
   background-color: #d6fff6;
+}
+.absoluteListForm {
+  background: linear-gradient(to right, #2375ab60, #2375ab60);
+  background: -webkit-linear-gradient(to right, #2375ab60, #2375ab60);
 }
