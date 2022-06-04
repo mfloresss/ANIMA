@@ -119,9 +119,10 @@ while :; do
 	10)
 		#10- Desplegar el nombre corto de la distribución detectada, también el usuario, y fecha del sistema.
 		NOM_DISTRO_C=$(lsb_release -d | awk '{print $2}')
-		echo $NOM_DISTRO_C
-
-		sleep 2
+		echo -e "Nombre corto de la distribucion: $NOM_DISTRO_C\n"
+		echo "Usuario: $USER"
+		echo -e "\n$FECHA_ACTUAL"
+		sleep 3
 		;;
 	*)
 		echo "Opcion incorrecta"
